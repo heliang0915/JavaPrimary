@@ -1,5 +1,4 @@
 package lession3.homework;
-
 import java.util.Scanner;
 
 import org.junit.Test;
@@ -42,6 +41,7 @@ public class HomeWork922 {
 	/**
 	 * 2、输出如下乘法表。
 	 */
+	@Test
 	public void multiplicationNine() {
 		for (int i = 1; i <= 9; i++) {
 			for (int j = 1; j <= i; j++) {
@@ -56,15 +56,19 @@ public class HomeWork922 {
 	/**
 	 * 3、计算a到b之间所有的奇数和和偶数和并输出（a、b取值自定，值差大于50）
 	 */
-
+	@Test
 	public void evenAndOddSum() {
 		sc = new Scanner(System.in);
 		System.out.println("请输入两个数差值大于50");
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int oddSum = 0;
-		int evenSum = 0;
+		int oddSum = 0; //奇数
+		int evenSum = 0;//偶数
 		if (Math.abs(a - b) < 50) { // 差值小于50
+			System.out.println("差值小于50,请重新输入");
+			evenAndOddSum();
+		}else if(a>b) {
+			System.out.println("请输入a要小于b");
 			evenAndOddSum();
 		} else {
 			for (int i = a; i < b; i++) {
@@ -74,9 +78,9 @@ public class HomeWork922 {
 					oddSum += i;
 				}
 			}
+			System.out.println(a + "和" + b + "之间的奇数和为：" + oddSum);
+			System.out.println(a + "和" + b + "之间的偶数和为：" + evenSum);
 		}
-		System.out.println(a + "和" + b + "之间的奇数和为：" + oddSum);
-		System.out.println(a + "和" + b + "之间的偶数和为：" + evenSum);
 	}
 
 	/**
@@ -85,6 +89,7 @@ public class HomeWork922 {
 	 * 如果输入的其他手机号，则输出“未知运营商”。（if、switch）
 	 * 
 	 */
+	@Test
 	public void phone() {
 		sc = new Scanner(System.in);
 		System.out.println("请输入手机号前三位");
@@ -100,7 +105,7 @@ public class HomeWork922 {
 			System.out.println("未知运营商");
 		}
 	}
-
+	@Test
 	public void phoneSwitch() {
 		sc = new Scanner(System.in);
 		System.out.println("请输入手机号前三位");
@@ -130,6 +135,7 @@ public class HomeWork922 {
 	/**
 	 * 5、编写程序实现对给定的4个整数从大到小的顺序排序。
 	 */
+	@Test
 	public void sort() {
 		int[] ary = new int[4];
 		ary[0] = 10;
