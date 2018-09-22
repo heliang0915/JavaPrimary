@@ -1,5 +1,5 @@
 package lession2;
-
+import org.junit.Test;
 public class Practice {
 	
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Practice {
 //		pr.test2();
 		pr.test3();
 	}
-	
+	@Test
 	public void test1() {
 	 char ch;
 	 short shTemp;
@@ -17,7 +17,7 @@ public class Practice {
 	 ch=(char)shTemp;
 	 System.out.println("×Ö·û±äÁ¿ch="+ch);
 	}
-	
+	@Test
 	public void test2() {
 		final int X=5;
 		final double Y=2.3;
