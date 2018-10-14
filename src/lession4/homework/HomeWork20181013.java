@@ -1,46 +1,18 @@
-package lession4.test;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+ package lession4.homework;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-//
-//课堂练习：
-//1、创建一维数组，存放学生的6科成绩，计算总分和平均分。
-//2、请将”我” “爱” “北” “京”存入数组，然后正着和反着输出。
-//3、要求输入一组英文字符串数组，让这个字符串数组中前面一个元素的最后一个字母和下一个元素的首位上的字母相等，并且每个元素的长度大于等于2且小于等于100。
-//4、输入10个数，将不重复的数放入数组，输出数组元素。
-public class Test3 {
-	public static void test1() {
-		double[] ary = { 98, 92, 98, 96, 88, 89 };
-		double sum = 0;
-		double avg = 0;
-		for (int i = 0; i < ary.length; i++) {
-			sum += ary[i];
-		}
-		System.out.println(sum);
-		avg = sum / ary.length;
-		System.out.println("总分分为" + sum);
-		System.out.println("平均分为" + new BigDecimal(avg).setScale(2, RoundingMode.UP));
-
-	}
-
-	public static void test2() {
-		String[] ary = { "我", "爱", "北", "京" };
-		System.out.println(Arrays.toString(ary));
-		String[] temp = new String[ary.length];
-		System.out.println("ary.length-1:::" + (ary.length - 1));
-		int len = ary.length - 1;
-		for (int i = len; i >= 0; i--) {
-			temp[len - i] = ary[i];
-		}
-		System.out.println(Arrays.toString(temp));
-	}
-	
+/**
+ * 
+ * @Title:  HomeWork20181013.java   
+ * @Package lession4.homework   
+ * @Description: java课后作业 作业1013
+ * @author: 计续本18 17何良     
+ * @date:   2018年10月14日 下午11:11:37
+ */
+public class HomeWork20181013 {
 	/**
 	 * 1、定义一个二维数组（int，n行n列，n自定），依次输入n*n个2位数，分别赋值给数组各元素。方阵输出数组元素，计算并输出对角元素之和
 	 * @Title: test3   
@@ -64,8 +36,9 @@ public class Test3 {
 		int sum2=ary[0][n-1]+ary[n-1][0];
 		System.out.println("对角元素[0][0]-["+(n-1)+"]["+(n-1)+"]之和为："+sum);
 		System.out.println("对角元素[0]["+(n-1)+"]-["+(n-1)+"][0]之和为："+sum2);
-		System.out.println("输出二维方阵为:"+result);
-		sc.close();
+		System.out.println("输出二维方阵为:");
+		System.out.println(result);
+//		sc.close();
 	}
 
 	
@@ -121,16 +94,11 @@ public class Test3 {
 		}
 		return sb.indexOf("0")>-1?false:true;
 	}
-	
-	
-
 	public static void main(String[] args) {
-//		test1();
-//		test2();
-//		test4();
-//		String[] str=new String[]{"1a","a2b","b3c","caa"};
-//		System.out.println(test5(str));
 		homeWorkOne();
+		homeWorkTwo();
+		String[] str=new String[]{"1a","a2b","b3c","caa"};
+		boolean flag=homeWorkThree(str);
+		System.out.println("数组"+Arrays.toString(str)+(flag?"":"不")+"符合规则");
 	}
-
 }
