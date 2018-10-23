@@ -1,4 +1,4 @@
-package lession5.classroom;
+package lession5.homework;
 
 /**
  * 55Ò³Á·Ï°
@@ -7,7 +7,7 @@ package lession5.classroom;
  * @author Administrator
  *
  */
-public class Rectangle2 {
+public class Rectangle04 {
 	private int x;
 	private int y;
 
@@ -35,14 +35,14 @@ public class Rectangle2 {
 	// public Rectangle2() {
 	// }
 
-	public Rectangle2(int x, int y,int w,int l) {
+	public Rectangle04(int x, int y,int w,int l) {
 		this.x = x;
 		this.y = y;
 		this.w=w;
 		this.l=l;
 	}
 
-	public Rectangle2(Rectangle2 c) {
+	public Rectangle04(Rectangle04 c) {
 		this.x = c.getX();
 		this.y = c.getY();
 		this.w=c.getW();

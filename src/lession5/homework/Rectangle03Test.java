@@ -1,4 +1,4 @@
-package lession5.classroom;
+package lession5.homework;
 
 import java.util.Scanner;
 
@@ -8,9 +8,9 @@ import java.util.Scanner;
  * @author Administrator
  *
  */
-public class TestRectangle {
+public class Rectangle03Test {
 	public static void main(String[] args) {
-		Rectangle re = new Rectangle(10,20);
+		Rectangle03 re = new Rectangle03(10,20);
 		System.out.println("默认的宽"+re.getW());
 		System.out.println("默认的长"+re.getL());
 		Scanner sc = new Scanner(System.in);

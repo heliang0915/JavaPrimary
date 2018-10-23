@@ -1,4 +1,4 @@
-package lession5.classroom;
+package lession5.homework;
 
 /**
  * 矩形类 51页练习
@@ -6,13 +6,13 @@ package lession5.classroom;
  * @author Administrator
  *
  */
-public class Rectangle {
+public class Rectangle03 {
 	//矩形的长
 	private double l;
 	// 矩形的宽
 	private double w;
 	
-	public Rectangle( double w,double l) {
+	public Rectangle03( double w,double l) {
 		this.w=w;
 		this.l=l;
 	}
