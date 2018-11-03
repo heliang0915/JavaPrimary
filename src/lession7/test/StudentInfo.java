@@ -1,4 +1,5 @@
-package homework20181027;
+package lession7.test;
+
 
 /*
  学生信息类
@@ -8,26 +9,15 @@ package homework20181027;
  添加学生信息；
  计算总分；
  计算平均分
+ test调用4个方法 
  */
 public class StudentInfo {
-	private String no; // 学号
-	private static int total; // 学生总人数
 	// 定义成员变量
 	private String name;
 	private String major;
 	private double score1;
 	private double score2;
 	private double score3;
-
-	// 获取学号
-	public String getNo() {
-		return no;
-	}
-
-	// 获取学生总数
-	public static int getTotal() {
-		return total;
-	}
 
 	// 添加学生信息
 	public void setInfo(String name, String major, double score1, double score2, double score3) {
@@ -36,18 +26,12 @@ public class StudentInfo {
 		this.score1 = score1;
 		this.score2 = score2;
 		this.score3 = score3;
-		StudentInfo.total++;
-		if (StudentInfo.total < 9) {
-			this.no = "20180" + StudentInfo.total;
-		} else {
-			this.no = "2018" + StudentInfo.total;
-		}
 	}
 
 	public void getInfo() {
 		System.out.println("学生信息如下");
-		System.out.println("学生学号：" + this.no + ";学生姓名：" + this.name + "；所学专业：" + this.major + "；成绩1：" + this.score1
-				+ "；成绩2：" + this.score2 + "；成绩3：" + this.score3);
+		System.out.println("学生姓名：" + this.name + "；所学专业：" + this.major + "；成绩1：" + this.score1 + "；成绩2：" + this.score2
+				+ "；成绩3：" + this.score3);
 	}
 
 	// 计算总分
@@ -59,4 +43,11 @@ public class StudentInfo {
 		System.out.println("平均分为：" + ((this.score1 + this.score2 + this.score3) / 3));
 	}
 
+/*	public static void main(String[] args) {
+		StudentInfo stu = new StudentInfo();
+		stu.setInfo("王平", "计算机科学与技术", 98, 90, 100);
+		stu.getInfo();
+		stu.Sum();
+		stu.avg();
+	}*/
 }

@@ -9,6 +9,7 @@ public class StudentInfoTest {
 		stu2.setInfo("李四", "计算机科学与技术", 88, 70, 90);
 		stu.getInfo();
 		stu2.getInfo();
+		System.out.println("总人数为:"+StudentInfo.getTotal());
 	}
 
 }
