@@ -1,7 +1,7 @@
 package lession8.test2;
 
 //继承：父类动物
-public class Animal1 {
+public abstract class Animal1 {
 	// private boolean isAnimal = true;
 	// int legs=4;
 	private String name;
@@ -26,7 +26,5 @@ public class Animal1 {
 		System.out.println("会叫！");
 	}
 
-	public void display(String kidName) {
-		System.out.println("展示");
-	}
+	public abstract void display(String kidName);
 }

@@ -6,6 +6,20 @@ public class TestPet {
 
 		Animal1 c = new Cat1("Ð¡°×", "blue");
 		Animal1 d = new Dog1("´ó»Æ", "yellow");
+		
+		
+		if(c instanceof Animal1) {
+			System.out.println("Animal1");
+		}
+		if(c instanceof Cat1) {
+			System.out.println("Cat1");
+		}
+		if(d instanceof Animal1) {
+			System.out.println("Animal1");
+		}
+		if(d instanceof Dog1) {
+			System.out.println("Dog1");
+		}
 
 		Kids k1 = new Kids("Tom", c);
 		Kids k2 = new Kids("Emily", d);
