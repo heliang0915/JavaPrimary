@@ -46,16 +46,17 @@ public class TestCalender {
 
 		System.out.println(showCalender(ca));
 		System.out.println();
-		// Calendar ca2 = Calendar.getInstance();
-		// ca2.set(Calendar.MONTH, 11);
-		// System.out.println(showCalender(ca2));
+		Calendar ca2 = Calendar.getInstance();
+		ca2.set(Calendar.MONTH, 11); //设置为2018.12
+		System.out.println(showCalender(ca2));
 
 	}
 
 	private String showCalender(Calendar ca) {
-		StringBuffer ary = new StringBuffer("星期一\t星期二\t星期三\t星期四\t星期五\t星期六\t星期日\n");
-		ca.set(Calendar.DATE, 1);
+		StringBuffer ary = new StringBuffer("星期日\t星期一\t星期二\t星期三\t星期四\t星期五\t星期六\t");
+		ca.set(Calendar.DATE, 1);// 本月的第一天
 		int week = ca.get(Calendar.DAY_OF_WEEK);
+		week = week - 1;// 得到真正的星期
 
 		System.out.println("week:::::::" + week);
 		int maxDay = ca.getActualMaximum(Calendar.DATE);
@@ -66,12 +67,11 @@ public class TestCalender {
 			// System.out.print("\t");
 		}
 
-		for (int i = 1; i <= maxDay; i++) {
-			if (((i - 1) + week) % 7 == 0) {
+		for (int i = 0; i < maxDay; i++) {
+			if ((i + week) % 7 == 0) {
 				ary.append("\n");
 			}
-			ary.append(i + "\t");
-
+			ary.append((i + 1) + "\t");
 		}
 
 		return ary.toString();
